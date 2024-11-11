@@ -1,0 +1,117 @@
+.situations {
+    padding: 5rem 3rem 0 3rem;
+}
+
+.situation-grid {
+    display: grid;
+    padding: 5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: row;
+    gap: 2%;
+    padding: 2%;
+}
+
+.situation-card {
+    min-height: 400px;
+    display: flex;
+    background-color: transparent;
+    font-family: sans-serif;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.situation-card-description {
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    text-align: left;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    line-clamp: 10;
+    /* Number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.situation-card-inner {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.situation-card:hover .situation-card-inner {
+    transform: rotateY(180deg);
+}
+
+.situation-card-front,
+.situation-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 2px solid rgb(119, 0, 255);
+    border-radius: 1rem;
+}
+
+.situation-card-front {
+    background: linear-gradient(to right, #007bff, #8a2be2);
+    color: white;
+}
+
+.situation-card-back {
+    display: flex;
+    background: linear-gradient(to right, #61adff, #aa73dd);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.situation-card-top {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.situation-card-top>img {
+    flex: 1;
+    object-fit: cover;
+    border-radius: 1rem;
+    border: 2px solid rgb(119, 0, 255);
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.situation-card-bottom {
+    background-color: white;
+    padding: 0.5rem;
+    text-align: left;
+    overflow: hidden;
+    color: black;
+    border-radius: 0 0 1rem 1rem;
+    flex: 5;
+}
+
+.create-situation-card {
+    text-decoration: none;
+}
+
+.create-situation-card .situation-card {
+    cursor: pointer;
+}
+
+.plus-icon {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}

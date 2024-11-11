@@ -1,0 +1,64 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1A1A1A;
+    user-select: none;
+    /* Color de fondo */
+}
+
+.leftDiv {
+    display: flex;
+    align-items: center;
+}
+
+.leftDiv h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    /* Ajusta el tamaño de la fuente según sea necesario */
+    color: #ffffff;
+    /* Color del texto */
+    padding: 2rem;
+    /* Padding del logo */
+}
+
+.rightDiv {
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+}
+
+.rightDiv nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rightDiv nav ul li {
+    margin-left: 2rem;
+    /* Espacio entre los elementos del menú */
+}
+
+.rightDiv nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    /* Color del enlace por defecto */
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.07rem;
+    /* Ajusta el tamaño de la fuente según sea necesario */
+    position: relative;
+
+}
+
+.rightDiv nav ul li a:hover {
+    overflow: hidden;
+    background: linear-gradient(to right, #007bff, #8a2be2);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: background-position 0.5s;
+    background-position: right center;
+}
